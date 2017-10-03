@@ -18,7 +18,9 @@
     "start": "electron .",
     "start-watch": "node electron-watch.js",
     "test": "mocha",
-    "test-watch": "mocha watch"
+    "test-watch": "mocha watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "electronVersion": "0.36.2",
   "repository": {
@@ -68,11 +70,13 @@
     "nconf": "~0.8.2",
     "path-extra": "~3.0.0",
     "react": "~0.14.3",
-    "react-dom": "~0.14.3"
+    "react-dom": "~0.14.3",
+    "snyk": "^1.42.3"
   },
   "config": {
     "ghooks": {
       "pre-commit": "npm run lint && npm run test"
     }
-  }
+  },
+  "snyk": true
 }
