@@ -18,7 +18,9 @@
     "start": "electron .",
     "start-watch": "node electron-watch.js",
     "test": "mocha",
-    "test-watch": "mocha watch"
+    "test-watch": "mocha watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "electronVersion": "0.36.2",
   "repository": {
@@ -63,16 +65,18 @@
   "dependencies": {
     "bacon-dispatcher": "~0.9.9",
     "baconjs": "~0.7.82",
-    "electron-packager": "^5.1.1",
+    "electron-packager": "^6.0.1",
     "mkdirp": "^0.5.1",
     "nconf": "~0.8.2",
     "path-extra": "~3.0.0",
     "react": "~0.14.3",
-    "react-dom": "~0.14.3"
+    "react-dom": "~0.14.3",
+    "snyk": "^1.88.0"
   },
   "config": {
     "ghooks": {
       "pre-commit": "npm run lint && npm run test"
     }
-  }
+  },
+  "snyk": true
 }
