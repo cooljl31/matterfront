@@ -65,7 +65,7 @@
     "baconjs": "~0.7.82",
     "electron-packager": "^5.1.1",
     "mkdirp": "^0.5.1",
-    "nconf": "~0.8.2",
+    "nconf": "~0.11.0",
     "path-extra": "~3.0.0",
     "react": "~0.14.3",
     "react-dom": "~0.14.3"
